@@ -1,0 +1,34 @@
+{
+  "detail": {
+    "eventName": [
+      "DeleteServer",
+      "CreateApplication",
+      "CreateReplicationInstance",
+      "StopServer",
+      "CreateUser",
+      "DeleteStack",
+      "UpdateProject",
+      "UpdateApplication",
+      "DeleteReplicationInstance",
+      "UpdateStack",
+      "CreateProject",
+      "DeleteUser",
+      "UpdateUser",
+      "CreateDirectory",
+      "UpdateApiKey",
+      "CreateStack",
+      "CreateServer",
+      "StartServer",
+      "PutApplicationPolicy",
+      "CreateApiKey",
+      "CancelUpdateStack",
+      "UpdateServer",
+      "UpdateTerminationProtection",
+      "DeleteApiKey",
+      "DeleteApplication",
+      "DeleteDirectory",
+      "ModifyReplicationInstance",
+      "CreateMicrosoftAD"
+    ]
+  }
+}

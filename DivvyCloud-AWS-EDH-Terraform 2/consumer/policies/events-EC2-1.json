@@ -1,0 +1,28 @@
+{
+  "detail": {
+    "eventName": [
+      "AcceptVpcPeeringConnection",
+      "CreatePlacementGroup",
+      "CreateLoadBalancer",
+      "RegisterInstancesWithLoadBalancer",
+      "DeleteVpcPeeringConnection",
+      "CreateTrafficMirrorTarget",
+      "CreateVpcPeeringConnection",
+      "DeleteLoadBalancer",
+      "SetSecurityGroups",
+      "CreateLoadBalancerListeners",
+      "AddTags",
+      "DetachLoadBalancerFromSubnets",
+      "ApplySecurityGroupsToLoadBalancer",
+      "RemoveTags",
+      "AttachLoadBalancerToSubnets",
+      "DeleteLoadBalancerListeners",
+      "DeletePlacementGroup",
+      "SetSubnets",
+      "RejectVpcPeeringConnection",
+      "DeregisterInstancesFromLoadBalancer",
+      "DeleteTrafficMirrorTarget",
+      "ModifyLoadBalancerAttributes"
+    ]
+  }
+}
