@@ -865,7 +865,6 @@ resource "aws_ecs_cluster" "DivvyCloud-ECS-Cluster" {
 }
 
 
-
 resource "aws_cloudwatch_log_group" "DivvyCloud-ECS-Cluster-LogGroup" {
   name = aws_ecs_cluster.DivvyCloud-ECS-Cluster.name
 }
@@ -1090,6 +1089,15 @@ resource "aws_ecs_task_definition" "interfaceserver" {
     task_role_arn            = local.ecs_task_role
 }
 
+
+
+scheduler:
+
+      "--enqueue-immediately"
+      "--distribution-window"
+      "1440"
+
+
 resource "aws_ecs_task_definition" "scheduler" {
     container_definitions    = jsonencode(
         [
@@ -1098,6 +1106,9 @@ resource "aws_ecs_task_definition" "scheduler" {
                     "divvycloud",
                     "scheduler",
                     "--db-upgrade",
+                    "--enqueue-immediately",
+                    "--distribution-window",
+                    "1440"
                 ]
                 cpu                    = 0
                 dnsSearchDomains       = []
