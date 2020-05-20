@@ -71,24 +71,24 @@ variable "divvykeys_task_count" {
 
 variable "interface_server_task_count" {
     type = number
-    default = 1
+    default = 2
 }
 
 variable "scheduler_task_count" {
     type = number
-    default = 1
+    default = 2
 }
 
 // P2 Spot instances
 variable "worker_task_count" {
     type = number
-    default = 1
+    default = 8
 }
 
 // P0/1 persistent instances
 variable "worker_persistent_task_count" {
     type = number
-    default = 1
+    default = 2
 }
 
 variable "worker_task_cpu" {
