@@ -1089,15 +1089,6 @@ resource "aws_ecs_task_definition" "interfaceserver" {
     task_role_arn            = local.ecs_task_role
 }
 
-
-
-scheduler:
-
-      "--enqueue-immediately"
-      "--distribution-window"
-      "1440"
-
-
 resource "aws_ecs_task_definition" "scheduler" {
     container_definitions    = jsonencode(
         [
