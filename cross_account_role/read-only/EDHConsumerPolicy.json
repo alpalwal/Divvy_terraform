@@ -1,0 +1,36 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "events:DeleteRule",
+                "events:DescribeEventBus",
+                "events:DescribeRule",
+                "events:ListEventBuses",
+                "events:PutPermission",
+                "events:PutRule",
+                "events:PutTargets",
+                "events:RemovePermission",
+                "events:RemoveTargets",
+                "iam:CreatePolicyVersion",
+                "iam:DeletePolicyVersion",
+                "iam:GetPolicy",
+                "iam:GetPolicyVersion",
+                "iam:GetRole",
+                "iam:ListPolicies",
+                "iam:ListPolicyVersions",
+                "organizations:DescribeOrganization",
+                "sqs:CreateQueue",
+                "sqs:DeleteMessage",
+                "sqs:DeleteMessageBatch",
+                "sqs:DeleteQueue",
+                "sqs:ListQueues",
+                "sqs:ReceiveMessage",
+                "sqs:SetQueueAttributes"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
