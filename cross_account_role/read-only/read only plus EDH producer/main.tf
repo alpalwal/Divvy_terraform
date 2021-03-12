@@ -66,9 +66,8 @@ resource "aws_iam_policy" "DivvyCloud-Standard-Role-Policy3" {
 resource "aws_iam_policy" "DivvyCloud-EDH-Producer-Policy" {
   name        = "DivvyCloud-EDH-Producer-Policy"
   description = "DivvyCloud EDH Producer Policy"
-
-  policy = <<EOF
-  {
+  policy = jsonencode(
+    {
       "Version": "2012-10-17",
       "Statement": [
       {
@@ -94,7 +93,7 @@ resource "aws_iam_policy" "DivvyCloud-EDH-Producer-Policy" {
               "iam:AttachRolePolicy",
               "iam:PassRole"
           ],
-          "Resource": "arn:aws:iam::${AWS::AccountId}:role/service-role/event-driven-harvest/*eventbus-role"
+          "Resource": "arn:aws:iam::CONSUMERACCOUNTID:role/service-role/event-driven-harvest/*eventbus-role"
       },
       {
           "Effect": "Allow",
@@ -103,13 +102,11 @@ resource "aws_iam_policy" "DivvyCloud-EDH-Producer-Policy" {
               "iam:CreatePolicyVersion",
               "iam:DeletePolicyVersion"
           ],
-          "Resource": "arn:aws:iam::${AWS::AccountId}:policy/service-role/event-driven-harvest/*eventbus-policy"
+          "Resource": "arn:aws:iam::CONSUMERACCOUNTID:policy/service-role/event-driven-harvest/*eventbus-policy"
       }
       ]
+    })
   }
-  EOF
-  }
-
 
 
   // Attach DivvyCloud standard policies
